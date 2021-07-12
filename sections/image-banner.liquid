@@ -1,4 +1,4 @@
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+<!-- {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.adapt_height_first_image and section.settings.image != blank -%}
   {%- style -%}
@@ -245,4 +245,24 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} -->
+
+<div class="hero">
+  <div class="hero-title-container">
+    <div class="hero-text-container">
+      <h1>KOMBUCHA</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, id. Illum
+        deleniti sed cum quam ad, maxime eaque inventore
+      </p>
+      <div class="hero-a-container">
+        <a href="/collections/all">Buy Now</a>
+      </div>
+    </div>
+  </div>
+  <img class="hero-blue-komb hero-img" src=" {{ "blue.png" | asset_url }}"
+  alt=""> <img class="hero-red-komb hero-img" src=" {{ "red.png" | asset_url }}"
+  alt=""> <img class="hero-yellow-komb hero-img" src="
+  {{ "yellow.png" | asset_url }}" alt=""> <img class="hero-orange-komb hero-img"
+  src=" {{ "orange.png" | asset_url }}" alt="">
+</div>
