@@ -1,5 +1,8 @@
 /* Derived from base colors (theme settings) */
-
+body,
+html {
+  overflow-x: hidden;
+}
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
@@ -2101,7 +2104,7 @@ details-disclosure > details {
   text-align: center;
 }
 .hero-text-container a {
-  background-color: rgb(159, 249, 255);
+  background-color: #b9e1f2;
   width: 10rem;
   padding: 1rem 2rem;
   border-radius: 30px;
@@ -2131,4 +2134,92 @@ details-disclosure > details {
   left: -10rem;
   top: 20rem;
   transform: rotate(-30deg);
+}
+
+.add-to-cart {
+  outline: inherit;
+  border: none;
+  background-color: #b9e1f2;
+}
+.featured-products {
+  display: flex;
+  justify-content: center;
+}
+
+.featured-item {
+  background-color: white;
+  margin: 1rem;
+  border-radius: 10px;
+  position: relative;
+  width: 35rem;
+  height: 40rem;
+  margin-top: 20rem;
+}
+
+.featured-img {
+  width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -15rem;
+}
+.featured-text {
+  position: absolute;
+  bottom: 0;
+  height: 20rem;
+  margin: 1rem;
+  width: 95%;
+}
+.featured-title-price {
+  height: 10rem;
+}
+.featured-item h2 {
+  font-size: 20px;
+  width: 80%;
+  height: 5rem;
+}
+.add-to-cart {
+  height: 4rem;
+  padding: 0.5rem 0rem;
+  border-radius: 5px;
+  width: 30%;
+}
+.featured-cart-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.featured-more-info {
+  width: 100%;
+  background-color: #b9e1f2;
+  border-radius: 5px;
+  height: 4rem;
+  font-size: 20px;
+
+  text-align: center;
+  color: black;
+}
+
+.spin {
+  display: inline-block;
+}
+.spin span {
+  display: inline-block;
+  width: 20px;
+  height: 22px;
+  text-align: center;
+  padding-top: 2px;
+  background: #ff0;
+  border: 1px solid #aaa;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.spin span:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.spin input {
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  font-weight: bold;
 }

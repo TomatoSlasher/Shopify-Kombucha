@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<!-- <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-badge.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -160,4 +160,62 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} -->
+<div class="featured-products">
+  {% for product in collections.all.products %} {% if product.tags contains
+  'bottle' %}
+
+  <div class="featured-item">
+    <img
+      class="featured-img"
+      src="{{ product.featured_image | img_url: '600x600' }}"
+      alt=""
+    />
+    <div class="featured-text">
+      <div class="featured-title-price">
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.price | money }}</p>
+      </div>
+
+      <form class="featured-cart-form" method="post" action="/cart/add">
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.variants.first.id }}"
+        />
+
+        <div class="spin">
+          <span>&ndash;</span
+          ><input
+            class="featured-cart-counter"
+            min="1"
+            type="number"
+            id="quantity"
+            name="quantity"
+            value="1"
+          /><span>+</span>
+        </div>
+        <!-- <input
+          class="featured-cart-counter"
+          min="1"
+          type="number"
+          id="quantity"
+          name="quantity"
+          value="1"
+        /> -->
+        <input
+          class="add-to-cart"
+          type="submit"
+          value="Add to cart"
+          class="btn"
+        />
+      </form>
+
+      <div class="featured-more-info">
+        <p>More info</p>
+      </div>
+    </div>
+  </div>
+
+  {% endif %} {% endfor %}
+</div>
