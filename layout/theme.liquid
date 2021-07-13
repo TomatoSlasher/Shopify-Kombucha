@@ -17,7 +17,6 @@
     {% if page_description %}
     <meta name="description" content="{{ page_description | escape }}" />
     {% endif %} {% render 'meta-tags' %}
-    <script src="{{ 'main.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{
       content_for_header
@@ -124,20 +123,26 @@
     }}; --color-base-text-opacity-10-percent:
     {{ settings.colors_text | color_mix: settings.colors_background_1, 10
 
+
     }}; --color-base-text-opacity-20-percent:
     {{ settings.colors_text | color_mix: settings.colors_background_1, 20
+
 
     }}; --color-base-text-opacity-55-percent:
     {{ settings.colors_text | color_mix: settings.colors_background_1, 55
 
+
     }}; --color-base-text-opacity-85-percent:
     {{ settings.colors_text | color_mix: settings.colors_background_1, 85
+
 
     }}; --color-base-accent-1-opacity-10-percent:
     {{ settings.colors_accent_1 | color_mix: settings.colors_background_1, 10
 
+
     }}; --color-base-accent-2-opacity-10-percent:
     {{ settings.colors_accent_2 | color_mix: settings.colors_background_1, 10
+
 
     }}; } *, *::before, *::after { box-sizing: inherit; } html { box-sizing:
     border-box; font-size: 62.5%; height: 100%; } body { display: grid;

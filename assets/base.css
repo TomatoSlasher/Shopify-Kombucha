@@ -2199,27 +2199,13 @@ details-disclosure > details {
   text-align: center;
   color: black;
 }
-
-.spin {
-  display: inline-block;
-}
-.spin span {
-  display: inline-block;
-  width: 20px;
-  height: 22px;
+input {
   text-align: center;
-  padding-top: 2px;
-  background: #ff0;
-  border: 1px solid #aaa;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
 }
-.spin span:first-child {
-  border-radius: 4px 0 0 4px;
-}
-.spin input {
-  width: 40px;
-  height: 20px;
-  text-align: center;
-  font-weight: bold;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
